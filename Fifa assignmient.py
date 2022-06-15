@@ -404,7 +404,7 @@ for l in range(len(list_files)):
 #     counter+=1
     
 
-df=pd.read_csv(r'C:\Users\karee\Desktop\GOAT.csv')
+df=pd.read_csv(r'C:\Users\karee\Desktop\python projects\fifa assign\GOAT.csv')
 
 #these columns have string equations like 56+3 so i need to use eval
 #iloc the columns doesnt work with eval i tried.
@@ -477,11 +477,11 @@ for i in list_files:
     Italy_overall.append(italy_rating['overall'].mean())
 
 
-    Spain_value.append(spain_rating["value_eur"].mean())
-    France_value.append(france_rating["value_eur"].mean())
-    English_value.append(English_rating["value_eur"].mean())
-    German_value.append( german_rating["value_eur"].mean())
-    Italy_value.append(italy_rating["value_eur"].mean())
+    Spain_value.append(spain_rating["value_eur"].sum())
+    France_value.append(france_rating["value_eur"].sum())
+    English_value.append(English_rating["value_eur"].sum())
+    German_value.append( german_rating["value_eur"].sum())
+    Italy_value.append(italy_rating["value_eur"].sum())
 
     
     Catalony=df.loc[df["club_name"]=="FC Barcelona"]
@@ -531,18 +531,13 @@ plt.tight_layout()
 
 
 plt.figure(figsize=(10,10),dpi=100)
-plt.plot(list_fifas,Barca_avg,'ro-')
-plt.title("Barca's team overall average")
-plt.xlabel("Years")
-plt.ylabel("Overall Avg")
-mplcyberpunk.add_glow_effects()
 
 
-countries=[Spain_overall,France_overall,English_overall,German_overall,Italy_overall]
+
 labels=["Spain","France","England","Germany","Italy"]
 colors=['gold','blue','salmon','firebrick','limegreen']
-
 countries=[Spain_value,France_value,English_value,German_value,Italy_value]
+
 for i,j,k in zip(countries,labels,colors):
     plt.plot(list_fifas,i,marker='o',label=j,color=k)
 plt.title("League values")
