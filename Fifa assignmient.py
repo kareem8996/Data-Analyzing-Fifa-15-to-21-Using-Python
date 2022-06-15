@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import mplcyberpunk
 
 list_fifas=[15,16,17,18,19,20,21]
-list_files=[r"C:\Users\karee\Desktop\python projects\fifa assign\players_15.csv",r"C:\Users\karee\Desktop\python projects\fifa assign\players_16.csv",r"C:\Users\karee\Desktop\python projects\fifa assign\players_17.csv",r"C:\Users\karee\Desktop\python projects\fifa assign\players_18.csv",r"C:\Users\karee\Desktop\python projects\fifa assign\players_19.csv",r"C:\Users\karee\Desktop\python projects\fifa assign\players_20.csv",r"C:\Users\karee\Desktop\python projects\fifa assign\players_21.csv"]
+list_files=[r"players_15.csv",r"players_16.csv",r"players_17.csv",r"players_18.csv",r"players_19.csv",r"players_20.csv",r"players_21.csv"]
 
 def swapPositions(list, pos1, pos2):
     list[pos1], list[pos2] = list[pos2], list[pos1]
@@ -404,7 +404,7 @@ for l in range(len(list_files)):
 #     counter+=1
     
 
-df=pd.read_csv(r'C:\Users\karee\Desktop\python projects\fifa assign\GOAT.csv')
+df=pd.read_csv(r'GOAT.csv')
 
 #these columns have string equations like 56+3 so i need to use eval
 #iloc the columns doesnt work with eval i tried.
