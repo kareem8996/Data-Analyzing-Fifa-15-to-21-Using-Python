@@ -404,7 +404,7 @@ for l in range(len(list_files)):
 #     counter+=1
     
 
-df=pd.read_csv(r'C:\Users\karee\Desktop\GOAT.csv')
+df=pd.read_csv(r'GOAT.csv')
 
 #these columns have string equations like 56+3 so i need to use eval
 #iloc the columns doesnt work with eval i tried.
